@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>CHS About</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/CSS GRADIENT.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    
+</head>
+    
+ <nav class="grey darken-2" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="CHS%20Start.html" class="brand-logo">CHS Robotics</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="About.html">About</a></li>
+        <li><a href="https://www.youtube.com/user/carrollcrusaders">Videos</a></li>
+        <li><a href="Roster.html">Roster</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+         <li><a href="CHS%20Start.html">CHS Robotics</a></li>
+         <li><a href="About.html">About</a></li>
+        <li><a href="Videos.html">Videos</a></li>
+          <li><a href="Roster.html">Roster</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+    <body>
+       <div class="container">
+        <iframe src="https://ytchannelembed.com/ytce-gallery.php?user=Carroll Crusaders&rows=3&ratio=hd&width=240&margin=15&desc="100&desc_color=9E9E9E&title=24&title_color=000000&https=0&duration=1&views=1&likes=1&dislikes=1&fav=1&cols=3" style="width:100%;max-width:750px;" class="ytce"></iframe>
+        </div>
+    </body>
+</html>
