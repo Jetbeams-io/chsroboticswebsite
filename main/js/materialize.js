@@ -3,11 +3,6 @@
  * Copyright 2014-2015 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
-
-//Repeat Navbar
-$(document).ready(function() {
-    $('#nav').load('nav.html');
-});
 // Check for jQuery.
 if (typeof(jQuery) === 'undefined') {
   var jQuery;
@@ -7781,5 +7776,3 @@ Picker.extend( 'pickadate', DatePicker )
       }
     }; // Plugin end
 }( jQuery ));
-
-
