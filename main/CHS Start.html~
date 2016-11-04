@@ -25,6 +25,7 @@
   		document.getElementById("main-images").src = imagePath + showImages[imageNum - 1];
   }
   function imageLeft() {
+      //scroll one image to the left
   		imageNum -= 1;
   		if (imageNum < 1) {
   			imageNum = showImages.length;
@@ -32,12 +33,16 @@
   		showImage()
   }  
   function imageRight() {
+      //scroll one image to the right
 		imageNum += 1;
 		if (imageNum > showImages.length) {
 			imageNum = 1;
 		}
 		showImage()
   }
+  
+  //repeat scrolling image on an interval
+  window.setInterval("imageRight()", 5000);
   </script>  
   
 </head>
@@ -67,10 +72,7 @@
     <div class="container">
       <h1 class="header center blue-text text-darken-3">CHS Robotics</h1>
       <div class="row center">
-        <img id="main-images" height="500px" src="media/ybot2016team.jpg">    
-        <br> 
-		  <button onclick="imageLeft()"><</button> 
-		  <button onclick="imageRight()">></button>  
+        <img id="main-images" height="500px" src="media/ybot2016team.jpg">
         <br>
         <h5 class="header col s12 blue-text text-darken-3">Who are we?</h5>
       </div>
