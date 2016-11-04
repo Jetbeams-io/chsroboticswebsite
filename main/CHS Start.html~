@@ -18,14 +18,17 @@
       
   <script>
   var imagePath = "media/";
-  var showImages = ["ybot2016team.jpg", "ybot2016bot1.jpg", "ybot2016bot2.jpg"];
+  var showImages = ["ybot2016team.jpg", "ybot2016bot1.jpg"];
   var imageNum = 1;
-  var mainImages = document.getElementById("main-images");
+  var prevImg = 1;
   function showImage() {
   		document.getElementById("main-images").src = imagePath + showImages[imageNum - 1];
+  		//document.getElementById("main-images").style="background-image:url({file})".replace("{file}", imagePath + showImages[prevImg]);
+  		Materialize.fadeInImage("#main-images");
   }
   function imageLeft() {
       //scroll one image to the left
+      prevImg = imageNum;
   		imageNum -= 1;
   		if (imageNum < 1) {
   			imageNum = showImages.length;
@@ -34,6 +37,7 @@
   }  
   function imageRight() {
       //scroll one image to the right
+      prevImg = imageNum;
 		imageNum += 1;
 		if (imageNum > showImages.length) {
 			imageNum = 1;
@@ -42,8 +46,8 @@
   }
   
   //repeat scrolling image on an interval
-  window.setInterval("imageRight()", 5000);
-  </script>  
+  window.setInterval("imageRight()", 4000);
+  </script>
   
 </head>
 <body>
@@ -53,9 +57,9 @@
       <ul class="right hide-on-med-and-down">
         <li><a href="About.html">About</a></li>
         <li><a href="Videos.html">Videos</a></li>
+      </ul>
         <li><a href="Roster.html">Roster</a></li>
 	<li><a href="Forms.html">Forms</a></li>
-      </ul>
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href="CHS%20Start.html">CHS Robotics</a></li>
@@ -72,7 +76,7 @@
     <div class="container">
       <h1 class="header center blue-text text-darken-3">CHS Robotics</h1>
       <div class="row center">
-        <img id="main-images" height="500px" src="media/ybot2016team.jpg">
+        <img class="center responsive-img" id="main-images" width="80%" src="media/ybot2016team.jpg">
         <br>
         <h5 class="header col s12 blue-text text-darken-3">Who are we?</h5>
       </div>
