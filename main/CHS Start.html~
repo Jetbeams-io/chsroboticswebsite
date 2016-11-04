@@ -69,8 +69,8 @@
       <div class="row center">
         <img id="main-images" height="500px" src="media/ybot2016team.jpg">    
         <br> 
-		  <button onclick="imageLeft()"><</button>
-		  <button onclick="imageRight()">></button>
+		  <button onclick="imageLeft()"><</button> 
+		  <button onclick="imageRight()">></button>  
         <br>
         <h5 class="header col s12 blue-text text-darken-3">Who are we?</h5>
       </div>
