@@ -23,8 +23,6 @@
   var prevImg = 1;
   function showImage() {
   		document.getElementById("main-images").src = imagePath + showImages[imageNum - 1];
-  		//document.getElementById("main-images").style="background-image:url({file})".replace("{file}", imagePath + showImages[prevImg]);
-  		Materialize.fadeInImage("#main-images");
   }
   function imageLeft() {
       //scroll one image to the left
@@ -46,7 +44,7 @@
   }
   
   //repeat scrolling image on an interval
-  window.setInterval("imageRight()", 4000);
+  window.setInterval("imageRight()", 5000);
   </script>
   
 </head>
