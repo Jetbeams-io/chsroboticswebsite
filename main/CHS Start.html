@@ -15,35 +15,23 @@
   <script src="../../bin/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="js/materialize.js"></script>
-      
+  
   <script>
-  var imagePath = "media/";
-  var showImages = ["ybot2016team.jpg", "ybot2016bot1.jpg"];
-  var imageNum = 1;
-  var prevImg = 1;
-  function showImage() {
-  		document.getElementById("main-images").src = imagePath + showImages[imageNum - 1];
-  }
-  function imageLeft() {
-      //scroll one image to the left
-      prevImg = imageNum;
-  		imageNum -= 1;
-  		if (imageNum < 1) {
-  			imageNum = showImages.length;
-  		}
-  		showImage()
-  }  
-  function imageRight() {
-      //scroll one image to the right
-      prevImg = imageNum;
-		imageNum += 1;
-		if (imageNum > showImages.length) {
-			imageNum = 1;
-		}
-		showImage()
-  }
+  $(document).ready(function() {
+  $("#cf7_controls").on('click', 'span', function() {
+    $("#cf7 img").removeClass("opaque");
+
+    var newImage = $(this).index();
+
+    $("#cf7 img").eq(newImage).addClass("opaque");
+
+    $("#cf7_controls span").removeClass("selected");
+    $(this).addClass("selected");
+  	 });
+  });
+  
   //repeat scrolling image on an interval
-  window.setInterval("imageRight()", 5000);
+  //window.setInterval("", 5000);
   </script>
   
 </head>
@@ -72,9 +60,16 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <h1 class="header center blue-text text-darken-3">CHS Robotics</h1>
-      <div class="row center">
-        <img class="center responsive-img" id="main-images" width="80%" src="media/ybot2016team.jpg">
-        <br>
+      <div class="center" id="cf7">
+        <img class="opaque" src="media/ybot2016team.jpg" width="100%" />
+        <img src="media/ybot2016bot1.jpg" width="100%" />
+		</div>  
+		<p class="center" id="cf7_controls">
+ 		  <span class="selected">Image 1</span>
+  		  <span>Image 2</span>
+		</p>
+      <br>
+		<div class="row center">   
         <h5 class="header col s12 blue-text text-darken-3">Who are we?</h5>
       </div>
       <div class="row center">
@@ -90,11 +85,10 @@
       	Each challenge requires a different type of robot to complete the task successfully.
       	We design and build our robot using <a href="http://http://www.vexrobotics.com/">VEX Robotics</a> parts,
       	and we program it using <a href="http://www.robotc.net/">ROBOTC</a>.</p>
-      	<br>
-		    <p>You can learn more about YBOT at <a href="http://www.youthbot.org">www.youthbot.org</a> or you can click that beautiful, glowing, rainbow "About" button for more information about us!</p>
+		   <p>You can learn more about YBOT at <a href="http://www.youthbot.org">www.youthbot.org</a> or you can click that beautiful, glowing, rainbow "About" button for more information about us!</p>
       </div>
       <div class="row center">
-        <a href="About.html" id="download-button" class="btn-large waves-effect waves-teal raindbow-gradient">About</a>
+        <a href="About.html" id="about-button" class="btn-large waves-effect waves-teal raindbow-gradient">About</a>
       </div>
     </div>
   </div>
