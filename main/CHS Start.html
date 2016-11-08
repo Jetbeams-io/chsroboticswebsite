@@ -1,123 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0,"/>
-  <title>CHS Robotics</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0," />
+    <title>CHS Robotics</title>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/CSS GRADIENT.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../../bin/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/materialize.js"></script>
+    <script>
+        var imagePath = "media/";
+        var showImages = ["ybot2016team.jpg", "ybot2016bot1.jpg", "ybot2016bot2.jpg"];
+        var imageNum = 1;
+        var mainImages = document.getElementById("main-images");
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/CSS GRADIENT.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="../../bin/materialize.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/materialize.js"></script>
-      
-  <script>
-  var imagePath = "media/";
-  var showImages = ["ybot2016team.jpg", "ybot2016bot1.jpg", "ybot2016bot2.jpg"];
-  var imageNum = 1;
-  var mainImages = document.getElementById("main-images");
-  function showImage() {
-  		document.getElementById("main-images").src = imagePath + showImages[imageNum - 1];
-  }
-  function imageLeft() {
-      //scroll one image to the left
-  		imageNum -= 1;
-  		if (imageNum < 1) {
-  			imageNum = showImages.length;
-  		}
-  		showImage()
-  }  
-  function imageRight() {
-      //scroll one image to the right
-		imageNum += 1;
-		if (imageNum > showImages.length) {
-			imageNum = 1;
-		}
-		showImage()
-  }
-  
-  //repeat scrolling image on an interval
-  window.setInterval("imageRight()", 5000);
-  </script>  
-  
+        function showImage() {
+            document.getElementById("main-images").src = imagePath + showImages[imageNum - 1];
+        }
+
+        function imageLeft() {
+            //scroll one image to the left
+            imageNum -= 1;
+            if (imageNum < 1) {
+                imageNum = showImages.length;
+            }
+            showImage()
+        }
+
+        function imageRight() {
+            //scroll one image to the right
+            imageNum += 1;
+            if (imageNum > showImages.length) {
+                imageNum = 1;
+            }
+            showImage()
+        }
+        //repeat scrolling image on an interval
+        window.setInterval("imageRight()", 5000);
+    </script>
 </head>
+
 <body>
-    
-  <nav class="nav-gradient" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="CHS%20Start.html" class="brand-logo">CHS Robotics</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="About.html">About</a></li>
-        <li><a href="Videos.html">Videos</a></li>
-        <li><a href="Roster.html">Roster</a></li>
-	<li><a href="Forms.html">Forms</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="CHS%20Start.html">CHS Robotics</a></li>
-        <li><a href="About.html">About</a></li>
-        <li><a href="Videos.html">Videos</a></li>
-        <li><a href="Roster.html">Roster</a></li>
-	<li><a href="Forms.html">Forms</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-  
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <h1 class="header center blue-text text-darken-3">CHS Robotics</h1>
-      <div class="row center">
-        <img id="main-images" height="500px" src="media/ybot2016team.jpg">
-        <br>
-        <h5 class="header col s12 blue-text text-darken-3">Who are we?</h5>
-      </div>
-      <div class="row center">
-		    <p>CHS stands for Carroll High School, which is part of the <a href="http://nacs.k12.in.us">NACS district</a>.
-		    Our team is composed of many students from all grades, 9th through 12th.
-		    We elect a different student to be the leader every year, but everything is coordinated by Gary Platt, a PLTW teacher here at Carroll.</p>
-      </div>
-      <div class="row center">
-        <h5 class="header col s12 blue-text text-darken-3">What do we do?</h5>
-      </div>
-      <div class="row center">
-      	<p>Our team builds and codes robots to compete in the YBOT Challenge every year.
-      	Each challenge requires a different type of robot to complete the task successfully.
-      	We design and build our robot using <a href="http://http://www.vexrobotics.com/">VEX Robotics</a> parts,
-      	and we program it using <a href="http://www.robotc.net/">ROBOTC</a>.</p>
-      	<br>
-		    <p>You can learn more about YBOT at <a href="http://www.youthbot.org">www.youthbot.org</a> or you can click that beautiful, glowing, rainbow "About" button for more information about us!</p>
-      </div>
-      <div class="row center">
-        <a href="About.html" id="download-button" class="btn-large waves-effect waves-teal raindbow-gradient">About</a>
-      </div>
-    </div>
-  </div>
-
-  <footer class="page-footer blue darken-4">
-    <div class="container">
-      <div class="center">
-        <div class="col s12">
-          <h5 class="white-text">Contact</h5>
-          <ul>
-            <li><a class="white-text" href="#">crusadersrobotics@gmail.com</a></li>
-            <li><a class="white-text" href="https://www.youtube.com/user/carrollcrusaders">www.youtube.com/user/carrollcrusaders</a></li>
-          </ul>
+    <nav class="nav-gradient" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="CHS%20Start.html" class="brand-logo">CHS Robotics</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="About.html">About</a></li>
+                <li><a href="Videos.html">Videos</a></li>
+                <li><a href="Roster.html">Roster</a></li>
+                <li><a href="Forms.html">Forms</a></li>
+            </ul>
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="CHS%20Start.html">CHS Robotics</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Videos.html">Videos</a></li>
+                <li><a href="Roster.html">Roster</a></li>
+                <li><a href="Forms.html">Forms</a></li>
+            </ul> <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a> </div>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <h1 class="header center blue-text text-darken-3">CHS Robotics</h1>
+            <div class="row center"> <img id="main-images" height="500px" src="media/ybot2016team.jpg">
+                <br>
+                <h5 class="header col s12 blue-text text-darken-3">Who are we?</h5> </div>
+            <div class="row center">
+                <p>CHS stands for Carroll High School, which is part of the <a href="http://nacs.k12.in.us">NACS district</a>. Our team is composed of many students from all grades, 9th through 12th. We elect a different student to be the leader every year, but everything is coordinated by Gary Platt, a PLTW teacher here at Carroll.</p>
+            </div>
+            <div class="row center">
+                <h5 class="header col s12 blue-text text-darken-3">What do we do?</h5> </div>
+            <div class="row center">
+                <p>Our team builds and codes robots to compete in the YBOT Challenge every year. Each challenge requires a different type of robot to complete the task successfully. We design and build our robot using <a href="http://http://www.vexrobotics.com/">VEX Robotics</a> parts, and we program it using <a href="http://www.robotc.net/">ROBOTC</a>.</p>
+                <br>
+                <p>You can learn more about YBOT at <a href="http://www.youthbot.org">www.youthbot.org</a> or you can click that beautiful, glowing, rainbow "About" button for more information about us!</p>
+            </div>
+            <div class="row center"> <a href="About.html" id="download-button" class="btn-large waves-effect waves-teal raindbow-gradient">About</a> </div>
         </div>
-      </div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-        <div class="center">
-          Made with <a class="blue-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+    <footer class="page-footer blue darken-4">
+        <div class="container">
+            <div class="center">
+                <div class="col s12">
+                    <h5 class="white-text">Contact</h5>
+                    <ul>
+                        <li><a class="white-text" href="#">crusadersrobotics@gmail.com</a></li>
+                        <li><a class="white-text" href="https://www.youtube.com/user/carrollcrusaders">www.youtube.com/user/carrollcrusaders</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </footer>
-  
-  </body>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="center"> Made with <a class="blue-text text-lighten-3" href="http://materializecss.com">Materialize</a> </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
 </html>
